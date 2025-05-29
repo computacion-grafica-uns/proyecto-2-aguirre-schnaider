@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: e170054bb0b6ab64696acb7119192d70, type: 3}
+  m_Name: MaterialPhongTex
+  m_Shader: {fileID: 4800000, guid: a7f72d385f265da48a29926ebe20b754, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -59,8 +59,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 79ed222be5e9ce649aa69004cddb20e9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -72,19 +72,24 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Material_n: 76.8
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Roughness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Albedo: {r: 0.5686275, g: 0.5686275, b: 0.5686275, a: 1}
+    - _AmbientLight: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+    - _CameraPosition_w: {r: 0, g: 0, b: 5, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _LightIntensity: {r: 1, g: 0.82702863, b: 0.4009434, a: 1}
+    - _LightPosition_w: {r: 0.06, g: 0.23, b: 5.03, a: 1}
+    - _MaterialKa: {r: 0.25, g: 0.148, b: 0.06475, a: 1}
+    - _MaterialKd: {r: 0.4, g: 0.2368, b: 0.1036, a: 1}
+    - _MaterialKs: {r: 0.77459, g: 0.45856, b: 0.20062, a: 1}
   m_BuildTextureStacks: []
