@@ -530,7 +530,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6aaab3181cb0dfc46993e450a816e0a8, type: 2}
+      objectReference: {fileID: 2100000, guid: 5396123bdda90844d8714c72f35f4c22, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 1
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 433239349}
   obj: {fileID: 1956974991}
-  material: {fileID: 2100000, guid: 6aaab3181cb0dfc46993e450a816e0a8, type: 2}
+  material: {fileID: 2100000, guid: 5396123bdda90844d8714c72f35f4c22, type: 2}
   distance: 5
   horizontalSpeed: 50
   verticalSpeed: 50
