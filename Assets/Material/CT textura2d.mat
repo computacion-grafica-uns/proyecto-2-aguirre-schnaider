@@ -83,5 +83,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel: {r: 1, g: 1, b: 1, a: 1}
-    - _MaterialKd: {r: 0.23653254, g: 0.5245282, b: 0.45001373, a: 1}
+    - _MaterialKd: {r: 0.15327159, g: 0.33924818, b: 0.78867924, a: 1}
   m_BuildTextureStacks: []

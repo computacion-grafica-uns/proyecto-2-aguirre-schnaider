@@ -1,11 +1,26 @@
 Shader "Custom/CookTorrance"
 {
     Properties
-    {
+    {   
+        //PROPIEDADES DEL MATERIAL
         _MaterialKd("Kd Material", Color) = (0, 0, 0, 0) // color difuso del material
         _Fresnel("Reflectancia de Fresnel", color) = (0,0,0)// valor base de reflectancia
         _Rugosidad("Rugosidad", Range(0,1)) = 0.0 //controla que tan rugosa es la superficie
         _MainTex("Textura Difusa", 2D) = "white" {} //para la textura 2d
+
+        //LUCES
+        _PointLightIntensity("Point Light Intensity", Color) = (1,1,1,1)  //Intesidad de luz puntual
+        _PointLightPosition_w("Point Light Position (world)", Vector) = (0,5,0,1)
+        _AmbientLight("Ambient Light", Color) = (0.1,0.1,0.1,1)
+        _DirectionalLightIntensity("Directional Light Intensity", Color) = (1,1,1,1)  //Intesidad de luz puntual
+        _DirectionalLightDirection_w("Directional Light Direction (world)", Vector) = (0,-1,0,0) // Direccion de la luz direccional)
+        _SpotLightIntensity("Spot Light Intensity", Color) = (1,1,1,1)  //Intesidad de luz puntual
+        _SpotLightPosition_w("Spot Light Position (world)", Vector) = (0,5,0,1)
+        _SpotLightDirection_w("Spot Light Direction (world)", Vector) = (0,-1,0,0) // Direccion de la luz direccional)
+        _SpotLightAperture("Spot Light Aperture", float) = 30 // Apertura del cono de luz spot en grados
+
+        _CameraPosition_w("Camera Position (world)", Vector) = (5,0,0,1)
+
     }
 
     SubShader
@@ -38,7 +53,19 @@ Shader "Custom/CookTorrance"
             float _Rugosidad;
             sampler2D _MainTex;
 
+            //variables globales para luces
+            float4 _PointLightIntensity;
+            float4 _PointLightPosition_w;
+            float4 _CameraPosition_w;
+            float4 _AmbientLight;
+            float4 _DirectionalLightIntensity;
+            float4 _DirectionalLightDirection_w;
+            float4 _SpotLightIntensity;
+            float4 _SpotLightPosition_w;
+            float4 _SpotLightDirection_w;
+            float _SpotLightAperture;
 
+          
 
             //FUNCIONES PRINCIPALES PARA MODELO COOK TORRANCE
 

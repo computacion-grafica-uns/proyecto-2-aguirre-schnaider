@@ -84,7 +84,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
-    - _CameraPosition_w: {r: -0.04539309, g: 0.2819332, b: 0.5450083, a: 0}
+    - _CameraPosition_w: {r: 0.16593568, g: 4.6668196, b: 1.7869792, a: 0}
     - _Color: {r: 0.8207547, g: 0.25938943, b: 0.25938943, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightIntensity: {r: 1, g: 1, b: 1, a: 1}
