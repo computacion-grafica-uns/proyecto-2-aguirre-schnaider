@@ -1,98 +1,121 @@
-Shader "Custom/CookTorrance"{
-  Properties {
-
-      //para modificar los materiales desde el editor de unity
-    _Albedo ("Albedo", Color) = (1, 1, 1, 1) //para modificar el color base del material
-    _Roughness ("Roughness", Range(0, 1)) = 0.5 //para modificar que tan rguosa es la superficie
-    _Metallic ("Metallic", Range(0, 1)) = 0.5 // cuanto el material se comporta como metal. 0 dielectrico, 1 metal
-  }
-  SubShader {
-    Pass {
-      Tags { "LightMode" = "ForwardBase" }
-
-      CGPROGRAM
-      #pragma vertex vert
-      #pragma fragment frag
-
-      #define PI 3.14159265359f
-
-      // Properties
-      uniform fixed4 _LightColor0;
-      uniform fixed4 _Albedo;
-      uniform half   _Roughness;
-      uniform half   _Metallic;
-
-      // Vertex Input
-      struct appdata {
-        float4 vertex : POSITION;
-        float3 normal : NORMAL;
-      };
-
-      // Vertex to Fragment
-      struct v2f {
-        float4 pos      : SV_POSITION;
-        float3 normal   : NORMAL;
-        float4 posWorld : TEXCOORD0;
-      };
-
-      //------------------------------------------------------------------------
-      // Vertex Shader
-      //------------------------------------------------------------------------
-      v2f vert(appdata v) {
-        v2f o;
-        o.pos      = UnityObjectToClipPos(v.vertex);
-        o.normal   = normalize(mul(v.normal, unity_WorldToObject).xyz);
-        o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-        return o;
-      }
-
-      //------------------------------------------------------------------------
-      // Fragment Shader
-      //------------------------------------------------------------------------
-      fixed4 frag(v2f i) : SV_Target {
-        // Vector
-        half3 normal   = normalize(i.normal);
-        half3 lightDir = normalize(_WorldSpaceLightPos0.xyz);
-        half3 viewDir  = normalize(_WorldSpaceCameraPos.xyz - i.posWorld);
-        half3 halfDir  = normalize(lightDir + viewDir);
-
-        // Dot
-        half NdotL = saturate(dot(normal, lightDir));
-        half NdotV = saturate(dot(normal, viewDir));
-        half NdotH = saturate(dot(normal, halfDir));
-        half LdotH = saturate(dot(lightDir, halfDir));
-        half NdotHSqr = NdotH * NdotH;
-
-        // Roughness
-        half roughness    = _Roughness * _Roughness;
-        half roughnessSqr = roughness * roughness;
-
-        // Oren-Nayar
-        half A = 1.0 - 0.5 * (roughnessSqr / (roughnessSqr + 0.33));
-        half B = 0.45 * (roughnessSqr / (roughnessSqr + 0.09));
-        half C = saturate(dot(normalize(viewDir - normal * NdotV), normalize(lightDir - normal * NdotL)));
-        half angleL = acos(NdotL);
-        half angleV = acos(NdotV);
-        half alpha  = max(angleL, angleV);
-        half beta   = min(angleL, angleV);
-        fixed3 diffuse = _Albedo.rgb * (A + B * C * sin(alpha) * tan(beta)) * _LightColor0.rgb * NdotL;
-
-        // Cook-Torrance
-        half D = roughnessSqr / (PI * pow(NdotHSqr * (roughnessSqr - 1.0) + 1.0, 2.0));
-        half k  = roughness * 0.5;
-        half gl = NdotL / (NdotL * (1.0 - k) + k);
-        half gv = NdotV / (NdotV * (1.0 - k) + k);
-        half G = gl * gv;
-        half F = _Metallic + (1.0 - _Metallic) * pow(1.0 - LdotH, 5.0);
-        fixed3 specular = saturate((D * G * F) / (4.0 * NdotV)) * PI * _LightColor0.rgb;
-
-        // Color
-        fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.rgb * _Albedo.rgb;
-        fixed4 color = fixed4(ambient + lerp(diffuse, specular, _Metallic), 1.0);
-
-        return color;
-      }
-      ENDCG
+Shader "Custom/CookTorrance"
+{
+    Properties
+    {
+        _MaterialKd("Kd Material", Color) = (0.5, 0.5, 0.5, 1) // color difuso del material
+        _Fresnel("Reflectancia de Fresnel", color) = (0.04,0.04,0.04)// valor base de reflectancia
+        _Rugosidad("Rugosidad", Range(0,1)) = 0.5 //controla que tan rugosa es la superficie
+        _MainTex("Textura Difusa", 2D) = "white" {} //para la textura 2d
+     
     }
-  }
+
+    SubShader
+    {
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vertexShader
+            #pragma fragment fragmentShader
+            #include "UnityCG.cginc"
+
+             //
+            struct vertice {
+                float4 position : POSITION;
+                float3 normal : NORMAL;
+                float2 uv : TEXCOORD0; //para usar una textura 2d
+            };
+
+            struct v2f {
+                float4 vertex : SV_POSITION;
+                float3 normal_w : TEXCOORD0;
+                float3 viewDir_w : TEXCOORD1;
+                float2 uv : TEXCOORD2; // paso textura 2d al fragment
+
+            };
+
+            //las variables globales
+            float4 _MaterialKd;
+            float3 _Fresnel;
+            float _Rugosidad;
+            sampler2D _MainTex;
+            float _UsarTextura; //para la textura 2d
+
+            //FUNCIONES PRINCIPALES PARA MODELO COOK TORRANCE
+
+            //Con fresnel defino cuanto refleja un material dependiendo del angulo de vision F 
+            float3 aproxFresnel_Smith(float3 V, float3 H)
+            {
+                float3 F0 = _Fresnel;
+                return F0 + (1 - F0) * pow(1.0 - max(0, dot(V, H)), 5);
+            }
+            //Represento la micro superficie rugosa - micro normales  D
+            float distribucionNormalesGGX(float3 N, float3 H)
+            {
+                const float PI = 3.14159265;
+                float alpha = pow(_Rugosidad, 2);
+                float dotNH2 = pow(max(0, dot(N, H)), 2);
+                float denom = PI * pow(dotNH2 * (alpha * alpha - 1) + 1, 2);
+                return (alpha * alpha) / denom;
+            }
+            // para el sombreado 
+            float aproximacionSchlickGGX(float3 M, float3 N)
+            {
+                float alpha = pow(_Rugosidad, 2);
+                float k = alpha / 2;
+                float cosMN = max(0, dot(M, N));
+                float denom = (cosMN * (1 - k)) + k;
+                return cosMN / denom;
+            }
+            //combino el resultado de la apximacion ggx para la luz, la vista y la normal G
+            float enmascaradoSombras_Smith(float3 L, float3 V, float3 N)
+            {
+                float G1L = aproximacionSchlickGGX(L, N);
+                float G1V = aproximacionSchlickGGX(V, N);
+                return G1L * G1V;
+            }
+
+            //
+            float3 terminoEspecularCook_Torrance(float3 L, float3 N, float3 V)
+            {
+                float3 H = normalize(L + V);
+                float3 F = aproxFresnel_Smith(V, H);
+                float D = distribucionNormalesGGX(N, H);
+                float G = enmascaradoSombras_Smith(L, V, N);
+                return F * D * G / (4 * max(0, dot(N, L)) * max(0, dot(N, V)));
+            }
+
+            v2f vertexShader(vertice v)
+            {
+                v2f o;
+                float4 worldPos = mul(unity_ObjectToWorld, v.position);
+                o.vertex = UnityObjectToClipPos(v.position);
+                o.normal_w = UnityObjectToWorldNormal(v.normal);
+                o.viewDir_w = normalize(_WorldSpaceCameraPos - worldPos);
+                o.uv = v.uv;
+                return o;
+            }
+
+            fixed4 fragmentShader(v2f i) : SV_Target
+            {
+                float3 N = normalize(i.normal_w);
+                float3 V = normalize(i.viewDir_w);
+                float3 difusoColor;
+
+
+                // Direccion de luz fija 
+                float3 L = normalize(float3(0.577, 0.577, 0.577));
+
+                //Difuso de lambert
+                float3 difuso = _MaterialKd*tex2D(_MainTex, i.uv).rgb * max(0, dot(N, L));
+
+
+                float3 especular = terminoEspecularCook_Torrance(L, N, V);
+
+                float3 colorFinal = difuso + especular;
+                return float4(colorFinal, 1);
+            }
+            ENDCG
+        }
+    }
+    FallBack Off
 }
