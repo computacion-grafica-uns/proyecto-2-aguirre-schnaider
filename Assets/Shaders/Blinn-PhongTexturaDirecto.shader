@@ -118,17 +118,17 @@ Shader "BlinnPhongTexturaDirecto"
 
                 //Luz puntual
                 float3 L = normalize(_PointLightPosition_w - i.position_w);
-                float3 luzPuntual = calculateDiffuse(i, L, _PointLightIntensity.rgb)*tex2D(_Texture, i.uv) + calculateSpecular(i, L , _PointLightIntensity.rgb);
+                float3 luzPuntual = calculateDiffuse(i, L, _PointLightIntensity.rgb) + calculateSpecular(i, L , _PointLightIntensity.rgb);
 
                 //Luz direccional
                 L = -normalize(_DirectionalLightDirection_w.xyz);
-                float3 luzDireccional = calculateDiffuse(i, L, _DirectionalLightIntensity.rgb)*tex2D(_Texture, i.uv) + calculateSpecular(i, L, _DirectionalLightIntensity.rgb);
+                float3 luzDireccional = calculateDiffuse(i, L, _DirectionalLightIntensity.rgb) + calculateSpecular(i, L, _DirectionalLightIntensity.rgb);
 
                 float3 luzSpot = 0;
                 L = normalize(_SpotLightPosition_w.xyz - i.position_w);
                 if ( esIluminadoSpot(L) )
                 {
-                    luzSpot = calculateDiffuse(i, L, _SpotLightIntensity.rgb)*tex2D(_Texture, i.uv) + calculateSpecular(i, L, _SpotLightIntensity.rgb);
+                    luzSpot = calculateDiffuse(i, L, _SpotLightIntensity.rgb) + calculateSpecular(i, L, _SpotLightIntensity.rgb);
                 }
 
                 fragColor.rgb = ambient + luzPuntual + luzDireccional + luzSpot;

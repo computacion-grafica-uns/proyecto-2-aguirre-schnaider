@@ -85,10 +85,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-    - _CameraPosition_w: {r: -0.019103069, g: 0.3080473, b: 0.50173104, a: 0}
+    - _CameraPosition_w: {r: 0, g: 1.1686326, b: -4.8615117, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
-    - _DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightIntensity: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
     - _LightPosition_w: {r: -0.52, g: 5, b: 5.07, a: 1}
@@ -98,6 +98,6 @@ Material:
     - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
     - _PointLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
     - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
-    - _SpotLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _SpotLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
   m_BuildTextureStacks: []

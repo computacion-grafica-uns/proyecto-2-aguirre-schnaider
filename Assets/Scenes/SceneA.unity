@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4930f53ec855fb24a9177529edf53100, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 16
@@ -341,7 +341,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9bc788a53928f0044badb7c407c6cfbf, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 6
@@ -419,7 +419,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 56e1eafa9d115694ea1391c24b4757f8, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 3
@@ -492,7 +492,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fdd1910b6b820cc40a4784660ac7c8d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 4
@@ -643,7 +643,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b1a290d8aafc8ad44b814758b25a167a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 10
@@ -954,6 +954,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f564f7acc13628f4aa2eeefc1faf15f3, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 13
@@ -1031,7 +1035,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f564f7acc13628f4aa2eeefc1faf15f3, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 11
@@ -1101,6 +1105,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1a290d8aafc8ad44b814758b25a167a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 14
@@ -1240,10 +1248,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 56e1eafa9d115694ea1391c24b4757f8, type: 2}
   - {fileID: 2100000, guid: 8bdf03cd6cb84644dbd576439b9639f9, type: 2}
   - {fileID: 2100000, guid: ca2fd815c7df12a41a4d8567777a572b, type: 2}
+  - {fileID: 2100000, guid: c48309eb1c34a26419128610a2cd418e, type: 2}
+  - {fileID: 2100000, guid: ae93994f4362b3c4ebbea51c28343c2a, type: 2}
   PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
   AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-  DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
-  SpotLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+  DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
+  SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
   PointLightPosition_w: {x: 0, y: 5, z: 0, w: 1}
   DirectionalLightDirection_w: {x: 0, y: -1, z: 0, w: 0}
   SpotLightPosition_w: {x: 0, y: 5, z: 0, w: 1}
@@ -1336,7 +1346,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8bdf03cd6cb84644dbd576439b9639f9, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 15
@@ -1409,7 +1419,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ba9e263947d2dbb44b65b391182d190c, type: 2}
+      objectReference: {fileID: 2100000, guid: 9bc788a53928f0044badb7c407c6cfbf, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 21
@@ -1479,6 +1489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c48309eb1c34a26419128610a2cd418e, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 12
@@ -1627,6 +1641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ae93994f4362b3c4ebbea51c28343c2a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 8
@@ -1732,6 +1750,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8bdf03cd6cb84644dbd576439b9639f9, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 9
@@ -1912,6 +1934,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf01ccd542dfd9447a21b5efdedc5194, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 7
@@ -1999,7 +2025,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
+      objectReference: {fileID: 2100000, guid: 56e1eafa9d115694ea1391c24b4757f8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 20
@@ -2091,6 +2117,7 @@ SceneRoots:
   - {fileID: 1765305484}
   - {fileID: 683286312}
   - {fileID: 1174803382}
+  - {fileID: 1628828871}
   - {fileID: 308695975}
   - {fileID: 93118671}
   - {fileID: 274729503}
@@ -2112,4 +2139,3 @@ SceneRoots:
   - {fileID: 2130057691}
   - {fileID: 2047306642}
   - {fileID: 1409881877}
-  - {fileID: 1628828871}
