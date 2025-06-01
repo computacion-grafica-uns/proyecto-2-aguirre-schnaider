@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OrenNayarMat
-  m_Shader: {fileID: 4800000, guid: f5a22c55347ad014bba3ac9df6937ba6, type: 3}
+  m_Name: MetalPulidoToon
+  m_Shader: {fileID: 4800000, guid: 6fbb0abb14969b949936e4bf941b9d88, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -76,17 +76,26 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Roughness: 1
+    - _ShadeLevels: 5
+    - _Shininess: 89
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpotLightAperture: 30
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
-    - _CameraPosition_w: {r: 0.16593568, g: 4.6668196, b: 1.7869792, a: 0}
-    - _Color: {r: 0.8207547, g: 0.25938943, b: 0.25938943, a: 1}
+    - _AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+    - _BaseColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _CameraPosition_w: {r: 5, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
+    - _DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightIntensity: {r: 1, g: 1, b: 1, a: 1}
-    - _LightPosition_w: {r: 0, g: 5, b: 5.1, a: 1}
+    - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _PointLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
+    - _SpecularColor: {r: 0.95, g: 0.95, b: 0.95, a: 1}
+    - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
+    - _SpotLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _SpotLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
   m_BuildTextureStacks: []

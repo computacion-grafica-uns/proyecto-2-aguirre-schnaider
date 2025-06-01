@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "BolaNavide\xF1aON"
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Toon
+  m_Shader: {fileID: 4800000, guid: 6fbb0abb14969b949936e4bf941b9d88, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -59,6 +59,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: fba31533defc49b458dee4adc732dfbb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
@@ -72,12 +76,28 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ShadeLevels: 5
+    - _Shininess: 79
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpotLightAperture: 50.49
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _AmbientLight: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+    - _BaseColor: {r: 0.9339623, g: 0.066082224, b: 0.066082224, a: 1}
+    - _CameraPosition_w: {r: 5, g: 2.17, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DirectionalLightDirection_w: {r: 0, g: -3.65, b: 3.75, a: 0}
+    - _DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _LightPosition_w: {r: 0, g: 5, b: 5.67, a: 1}
+    - _PointLightIntensity: {r: 0, g: 0, b: 0, a: 1}
+    - _PointLightPosition_w: {r: 0, g: 1.01, b: -0.1, a: 1}
+    - _SpecularColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+    - _SpotLightDirection_w: {r: -0.26, g: -2.24, b: -0.12, a: 0}
+    - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
+    - _SpotLightPosition_w: {r: -1.6, g: 1.35, b: -2.08, a: 1}
   m_BuildTextureStacks: []

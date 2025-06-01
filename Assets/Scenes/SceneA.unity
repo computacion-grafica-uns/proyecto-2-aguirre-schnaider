@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4930f53ec855fb24a9177529edf53100, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 16
@@ -191,6 +195,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &87127661 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1409881877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &93118671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,6 +260,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 2
@@ -260,6 +273,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &232313524 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1096997047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &238250333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -320,6 +338,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9bc788a53928f0044badb7c407c6cfbf, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 6
@@ -329,6 +351,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &250659089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 793361279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &274729503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -389,6 +416,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 56e1eafa9d115694ea1391c24b4757f8, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 3
@@ -458,6 +489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdd1910b6b820cc40a4784660ac7c8d3, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 4
@@ -467,6 +502,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &307552838 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 392013122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &308695975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -530,7 +570,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5396123bdda90844d8714c72f35f4c22, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 1
@@ -600,6 +640,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1a290d8aafc8ad44b814758b25a167a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 10
@@ -609,6 +653,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &425891896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1591363052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &433239347
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,12 +744,22 @@ Transform:
   m_GameObject: {fileID: 433239347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -4.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &496789269 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 2047306642}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &595738321 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1115111581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &683286310
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +805,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &742668294 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1712908396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &793361279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -815,6 +879,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &818797461 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1076718224}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &905872251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 971578286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &941894815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 274729503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &971578286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -884,6 +963,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &1007232311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 65923258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1076718224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -944,6 +1028,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f564f7acc13628f4aa2eeefc1faf15f3, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 11
@@ -1121,8 +1209,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 433239349}
-  obj: {fileID: 1956974991}
-  material: {fileID: 2100000, guid: 5396123bdda90844d8714c72f35f4c22, type: 2}
+  objects:
+  - {fileID: 1628828871}
+  - {fileID: 1997673798}
+  - {fileID: 1782555598}
+  - {fileID: 941894815}
+  - {fileID: 1219033857}
+  - {fileID: 250659089}
+  - {fileID: 2033391642}
+  - {fileID: 1585142433}
+  - {fileID: 1618554570}
+  - {fileID: 742668294}
+  - {fileID: 307552838}
+  - {fileID: 818797461}
+  - {fileID: 1972117156}
+  - {fileID: 905872251}
+  - {fileID: 232313524}
+  - {fileID: 1508245665}
+  - {fileID: 1007232311}
+  - {fileID: 595738321}
+  - {fileID: 425891896}
+  - {fileID: 2095824572}
+  - {fileID: 496789269}
+  - {fileID: 87127661}
+  materials:
+  - {fileID: 2100000, guid: cf01ccd542dfd9447a21b5efdedc5194, type: 2}
+  - {fileID: 2100000, guid: b1a290d8aafc8ad44b814758b25a167a, type: 2}
+  - {fileID: 2100000, guid: 9bc788a53928f0044badb7c407c6cfbf, type: 2}
+  - {fileID: 2100000, guid: f564f7acc13628f4aa2eeefc1faf15f3, type: 2}
+  - {fileID: 2100000, guid: 56e1eafa9d115694ea1391c24b4757f8, type: 2}
+  - {fileID: 2100000, guid: 8bdf03cd6cb84644dbd576439b9639f9, type: 2}
+  - {fileID: 2100000, guid: ca2fd815c7df12a41a4d8567777a572b, type: 2}
+  PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+  AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+  SpotLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+  PointLightPosition_w: {x: 0, y: 5, z: 0, w: 1}
+  DirectionalLightDirection_w: {x: 0, y: -1, z: 0, w: 0}
+  SpotLightPosition_w: {x: 0, y: 5, z: 0, w: 1}
+  SpotLightDirection_w: {x: 0, y: -1, z: 0, w: 0}
+  SpotLightAperture: 30
   distance: 5
   horizontalSpeed: 50
   verticalSpeed: 50
@@ -1142,6 +1268,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1219033857 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 301388481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1293615581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1202,6 +1333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8bdf03cd6cb84644dbd576439b9639f9, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 15
@@ -1271,6 +1406,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ba9e263947d2dbb44b65b391182d190c, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 21
@@ -1349,6 +1488,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &1508245665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1293615581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1585142433 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1950262573}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1591363052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,6 +1636,42 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &1618554570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1600929210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1628828870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1628828871}
+  m_Layer: 0
+  m_Name: Centro de escena
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1628828871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628828870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1712908396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1617,7 +1802,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ca2fd815c7df12a41a4d8567777a572b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1662,6 +1847,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1782555598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 93118671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1950262573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1731,10 +1921,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
---- !u!4 &1956974991 stripped
+--- !u!4 &1972117156 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 1437436945}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1997673798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
   m_PrefabInstance: {fileID: 308695975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2033391642 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 238250333}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2047306642
 PrefabInstance:
@@ -1796,6 +1996,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 20
@@ -1805,6 +2009,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+--- !u!4 &2095824572 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+  m_PrefabInstance: {fileID: 2130057691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2130057691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1903,3 +2112,4 @@ SceneRoots:
   - {fileID: 2130057691}
   - {fileID: 2047306642}
   - {fileID: 1409881877}
+  - {fileID: 1628828871}
