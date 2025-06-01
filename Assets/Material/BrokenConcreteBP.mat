@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureA:
-        m_Texture: {fileID: 2800000, guid: f348ebda54d268e45b7fa5bceed1909a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 322a0f2566bc26d4aa6ef196af6f68e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureB:
@@ -73,6 +73,7 @@ Material:
     - _AtenuationB: 0
     - _Blend: 0.16
     - _BumpScale: 1
+    - _CrackWeight: 0.61
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -90,21 +91,22 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _WeightA: 1
-    - _WeightB: 0.14
+    - _WeightB: 0.36
+    - _WeightCracks: 0.23
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0.09999997, g: 0.09999997, b: 0.09999997, a: 1}
-    - _CameraPosition_w: {r: 5, g: 0, b: 0, a: 1}
+    - _AmbientLight: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+    - _CameraPosition_w: {r: 0.9237455, g: 0.21278651, b: 1.4684502, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
-    - _DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _DirectionalLightDirection_w: {r: 0, g: 0, b: -1, a: 0}
+    - _DirectionalLightIntensity: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MaterialKa: {r: 0.25, g: 0.25, b: 0.25, a: 1}
     - _MaterialKd: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _MaterialKs: {r: 0, g: 0, b: 0, a: 0}
     - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
-    - _PointLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
+    - _PointLightPosition_w: {r: 0, g: 5, b: -0.93, a: 1}
     - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
-    - _SpotLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _SpotLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
   m_BuildTextureStacks: []

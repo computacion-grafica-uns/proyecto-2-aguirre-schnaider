@@ -1178,6 +1178,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5042c9fdbb2eec74a9b1f9a9a02001f0, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 17
@@ -1250,6 +1254,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ca2fd815c7df12a41a4d8567777a572b, type: 2}
   - {fileID: 2100000, guid: c48309eb1c34a26419128610a2cd418e, type: 2}
   - {fileID: 2100000, guid: ae93994f4362b3c4ebbea51c28343c2a, type: 2}
+  - {fileID: 2100000, guid: f5c1a20d52184b54895b46dcf3f3314b, type: 2}
+  - {fileID: 2100000, guid: 5042c9fdbb2eec74a9b1f9a9a02001f0, type: 2}
   PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
   AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
@@ -1346,7 +1352,7 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
+      objectReference: {fileID: 2100000, guid: f5c1a20d52184b54895b46dcf3f3314b, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 15

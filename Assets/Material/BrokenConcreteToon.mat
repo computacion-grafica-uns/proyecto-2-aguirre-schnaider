@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BrokenConcreteToon
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 8ac84b70fd8de3e49a0e84118731e492, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -59,6 +59,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureA:
+        m_Texture: {fileID: 2800000, guid: 322a0f2566bc26d4aa6ef196af6f68e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureB:
+        m_Texture: {fileID: 2800000, guid: 1989715d0c4b53848b3bd5f2aa8bfdd1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
@@ -72,12 +80,30 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ShadeLevels: 5
+    - _Shininess: 25
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpotLightAperture: 30
     - _SrcBlend: 1
+    - _TextureLevels: 4.69
     - _UVSec: 0
+    - _WeightA: 1
+    - _WeightB: 0.13
+    - _WeightCracks: 0.27
     - _ZWrite: 1
     m_Colors:
+    - _AmbientLight: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
+    - _BaseColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+    - _CameraPosition_w: {r: 0.9237455, g: 0.21278651, b: 1.4684502, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DirectionalLightDirection_w: {r: 0, g: 0, b: -1, a: 0}
+    - _DirectionalLightIntensity: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _PointLightPosition_w: {r: 0, g: 5, b: -0.93, a: 1}
+    - _SpecularColor: {r: 0.15, g: 0.15, b: 0.15, a: 1}
+    - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
+    - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
+    - _SpotLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
   m_BuildTextureStacks: []

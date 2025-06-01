@@ -23,7 +23,7 @@ Shader "ToonMultitextura"
 
         [NoScaleOffset] _TextureA ("TexturaA", 2D) = "white" {}
         [NoScaleOffset] _TextureB ("TexturaB (Cracks)", 2D) = "white" {}
-        _WeightB ("Weight B", Range(0,1)) = 0.5
+        _WeightCracks ("Weight Cracks", Range(0,1)) = 0.5
     }
 
     SubShader
@@ -57,7 +57,7 @@ Shader "ToonMultitextura"
             int _TextureLevels;
             sampler2D _TextureA;
             sampler2D _TextureB;
-            float _WeightB;
+            float _WeightCracks;
 
             struct appdata
             {
@@ -98,7 +98,8 @@ Shader "ToonMultitextura"
             {
                 float3 texA = tex2D(_TextureA, i.uv).rgb;
                 float3 texB = tex2D(_TextureB, i.uv).rgb;
-                float3 blendedTex = texA * (texB + _WeightB);
+                float3 blendedTex = texA * (texB);
+                blendedTex = lerp(blendedTex, texA, _WeightCracks); // Mezcla las texturas con el peso)
                 blendedTex = Posterize(blendedTex, _TextureLevels ); // Posterize blended texture
                 
                 // Luz puntual

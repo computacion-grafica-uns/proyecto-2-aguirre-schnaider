@@ -21,7 +21,7 @@ Shader "BlinnPhongMultitextura"
 
         [NoScaleOffset] _TextureA ("TexturaA", 2D) = "white" {}
         [NoScaleOffset] _TextureB ("TexturaB (Cracks)", 2D) = "white" {}
-        _WeightB ("Weight B", Range(0,1)) = 0.5
+        _WeightCracks ("Weight Cracks", Range(0,1)) = 0.5
        
 
 
@@ -76,7 +76,7 @@ Shader "BlinnPhongMultitextura"
             float _Material_n;
             sampler2D _TextureA;
             sampler2D _TextureB;
-            float _WeightB;
+            float _WeightCracks;
 
             float3 calculateDiffuse(v2f i, float3 L , float3 lightIntensity){
                 float3 N = normalize(i.normal_w);
@@ -122,7 +122,8 @@ Shader "BlinnPhongMultitextura"
                 //Mezclo las multiples texturas a un solo color por fragmento
                 float3 texA = tex2D(_TextureA, i.uv).rgb;
                 float3 texB = tex2D(_TextureB, i.uv).rgb;
-                float3 blendedTex = texA * (texB + _WeightB);
+                float3 blendedTex = texA * (texB);
+                blendedTex = lerp(blendedTex, texA, _WeightCracks); // Mezcla las texturas con el peso)
                 
                 //parte de iluminación ambiente
                 float3 ambient = _AmbientLight * _MaterialKa;
