@@ -2,7 +2,7 @@ Shader "Custom/CookTorranceIluminacion"
 {
     Properties
     {
-        _AmbientLight("Ambient Light", Color) = (0,0,0,1)
+        _AmbientLight("Ambient Light", Color) = (0.3,0.3,0.3,1)
         _PointLightIntensity("Point Light Intensity", Color) = (1,1,1,1)
         _PointLightPosition_w("Point Light Position (world)", Vector) = (0,5,0,1)
         _DirectionalLightIntensity("Directional Light Intensity", Color) = (1,1,1,1)
@@ -12,10 +12,15 @@ Shader "Custom/CookTorranceIluminacion"
         _SpotLightDirection_w("Spot Light Direction (world)", Vector) = (0,-1,0,0)
         _SpotLightAperture("Spot Light Aperture", float) = 30
         _CameraPosition_w("Camera Position (world)", Vector) = (5,0,0,1)
-        _MaterialKd("Kd Material", Color) = (0, 0, 0, 0)
-        _Fresnel("Reflectancia de Fresnel", color) = (0,0,0)
-        _Rugosidad("Rugosidad", Range(0,1)) = 0.0
-        _MainTex("Textura Difusa", 2D) = "white" {}
+        _MaterialKd("Kd Material", Color) = (1, 1, 1, 1)
+        _Fresnel("Reflectancia de Fresnel", color) = (0.004,0.004,0.004)
+        _Rugosidad("Rugosidad", Range(0,1)) = 0.0   
+
+
+        [NoScaleOffset] _TextureA ("TexturaA", 2D) = "white" {}
+        [NoScaleOffset] _TextureB ("TexturaB (Cracks)", 2D) = "white" {}
+        _WeightCracks ("Weight Cracks", Range(0,1)) = 0.5
+
 
         _MaterialKa("Ka Material", Color) = (0.1, 0.1, 0.1, 1)
 
@@ -60,7 +65,10 @@ Shader "Custom/CookTorranceIluminacion"
             float4 _MaterialKa;
             float3 _Fresnel;
             float _Rugosidad;
-            sampler2D _MainTex;
+
+            sampler2D _TextureA;
+            sampler2D _TextureB;
+            float _WeightCracks;
 
             float3 aproxFresnel_Smith(float3 V, float3 H) {
                 float3 F0 = _Fresnel;
@@ -98,8 +106,8 @@ Shader "Custom/CookTorranceIluminacion"
             }
 
             float3 terminoDifusoBlinn_Phong(float3 intensidadLuz, float3 L, float3 N, v2f f) {
-                float3 luzDifusa = 0.3 * intensidadLuz;
-                float3 reflexionDifusa = _MaterialKd.rgb * tex2D(_MainTex, f.uv).rgb * max(0.001, dot(N, L));
+                float3 luzDifusa = intensidadLuz;
+                float3 reflexionDifusa = _MaterialKd.rgb * max(0.001, dot(N, L));
                 return luzDifusa * reflexionDifusa;
             }
 
@@ -122,14 +130,24 @@ Shader "Custom/CookTorranceIluminacion"
                 float3 N = normalize(i.normal_w);
                 float3 V = normalize(i.viewDir_w);
 
+                //agrego las texturas
+                float3 texA = tex2D(_TextureA, i.uv).rgb;
+                float3 texB = tex2D(_TextureB, i.uv).rgb;
+                float3 blendedTex = texA * (texB);
+                blendedTex = lerp(blendedTex, texA, _WeightCracks); // Mezcla las texturas con el peso)
+
+
+                
                 float3 LPuntual = normalize(_PointLightPosition_w.xyz - i.position_w.xyz);
                 float3 LDireccional = -normalize(_DirectionalLightDirection_w.xyz);
                 float3 LSpot = normalize(_SpotLightPosition_w.xyz - i.position_w.xyz);
 
                 float3 ambiente = _AmbientLight.rgb * _MaterialKa.rgb;
 
-                float3 difusoPuntual = terminoDifusoBlinn_Phong(_PointLightIntensity.rgb, LPuntual, N, i) / 3.14159265;
-                float3 difusoDireccional = terminoDifusoBlinn_Phong(_DirectionalLightIntensity.rgb, LDireccional, N, i) / 3.14159265;
+                //luz puntual
+                float3 difusoPuntual = blendedTex * terminoDifusoBlinn_Phong(_PointLightIntensity.rgb, LPuntual, N, i) / 3.14159265;
+                //luz direccional
+                float3 difusoDireccional = blendedTex * terminoDifusoBlinn_Phong(_DirectionalLightIntensity.rgb, LDireccional, N, i) / 3.14159265;
                 float3 difusoSpot = float3(0, 0, 0);
 
                 float3 especularPuntual = _PointLightIntensity.rgb * terminoEspecularCook_Torrance(LPuntual, N, V);
@@ -137,7 +155,7 @@ Shader "Custom/CookTorranceIluminacion"
                 float3 especularSpot = float3(0, 0, 0);
 
                 if (esIluminadoSpot(LSpot)) {
-                    difusoSpot = terminoDifusoBlinn_Phong(_SpotLightIntensity.rgb, LSpot, N, i) / 3.14159265;
+                    difusoSpot = blendedTex * terminoDifusoBlinn_Phong(_SpotLightIntensity.rgb, LSpot, N, i) / 3.14159265;
                     especularSpot =  _SpotLightIntensity.rgb * terminoEspecularCook_Torrance(LSpot, N, V);
                 }
 

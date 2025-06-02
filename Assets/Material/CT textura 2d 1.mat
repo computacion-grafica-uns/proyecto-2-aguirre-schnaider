@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CeramicaBarroBP
-  m_Shader: {fileID: 4800000, guid: 5c9547ac83b5a9c41ac9900f39b977c6, type: 3}
+  m_Name: CT textura 2d 1
+  m_Shader: {fileID: 4800000, guid: 1923e487f51ff32409310a321260feb0, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dfb6eac7ca7182d46bdec9a4f57522f1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -59,7 +59,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Texture:
+    - _Texture1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureA:
+        m_Texture: {fileID: 2800000, guid: 7c421c2c7f9ecea408c07ef524c93b4f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureB:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -72,29 +84,30 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Material_n: 5
+    - _Material_n: 0.5
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Rugosidad: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpotLightAperture: 30
     - _SrcBlend: 1
     - _UVSec: 0
+    - _WeightCracks: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+    - _AmbientLight: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
     - _CameraPosition_w: {r: 2, g: 0.8505459, b: -1.0889354, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightIntensity: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
-    - _LightPosition_w: {r: -0.52, g: 5, b: 5.07, a: 1}
-    - _MaterialKa: {r: 0.15, g: 0.08, b: 0.05, a: 1}
-    - _MaterialKd: {r: 0.65, g: 0.35, b: 0.2, a: 1}
-    - _MaterialKs: {r: 0.05, g: 0.04, b: 0.03, a: 1}
+    - _Fresnel: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 1}
+    - _MaterialKa: {r: 0, g: 0, b: 0, a: 1}
+    - _MaterialKd: {r: 0, g: 0.15750933, b: 1, a: 0}
+    - _MaterialKs: {r: 0, g: 0, b: 0, a: 0}
     - _PointLightIntensity: {r: 1, g: 0.98679245, b: 0.98679245, a: 1}
     - _PointLightPosition_w: {r: 7.45, g: 5, b: 0, a: 1}
     - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
