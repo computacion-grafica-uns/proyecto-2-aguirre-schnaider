@@ -1,25 +1,23 @@
-Shader "Custom/CookTorrance"
+Shader "Custom/CookTorranceIluminacion"
 {
     Properties
-    {   
-        //PROPIEDADES DEL MATERIAL
-        _MaterialKd("Kd Material", Color) = (0, 0, 0, 0) // color difuso del material
-        _Fresnel("Reflectancia de Fresnel", color) = (0,0,0)// valor base de reflectancia
-        _Rugosidad("Rugosidad", Range(0,1)) = 0.0 //controla que tan rugosa es la superficie
-        _MainTex("Textura Difusa", 2D) = "white" {} //para la textura 2d
-
-        //LUCES
-        _PointLightIntensity("Point Light Intensity", Color) = (1,1,1,1)  //Intesidad de luz puntual
+    {
+        _AmbientLight("Ambient Light", Color) = (0,0,0,1)
+        _PointLightIntensity("Point Light Intensity", Color) = (1,1,1,1)
         _PointLightPosition_w("Point Light Position (world)", Vector) = (0,5,0,1)
-        _AmbientLight("Ambient Light", Color) = (0.1,0.1,0.1,1)
-        _DirectionalLightIntensity("Directional Light Intensity", Color) = (1,1,1,1)  //Intesidad de luz puntual
-        _DirectionalLightDirection_w("Directional Light Direction (world)", Vector) = (0,-1,0,0) // Direccion de la luz direccional)
-        _SpotLightIntensity("Spot Light Intensity", Color) = (1,1,1,1)  //Intesidad de luz puntual
+        _DirectionalLightIntensity("Directional Light Intensity", Color) = (1,1,1,1)
+        _DirectionalLightDirection_w("Directional Light Direction (world)", Vector) = (0,-1,0,0)
+        _SpotLightIntensity("Spot Light Intensity", Color) = (1,1,1,1)
         _SpotLightPosition_w("Spot Light Position (world)", Vector) = (0,5,0,1)
-        _SpotLightDirection_w("Spot Light Direction (world)", Vector) = (0,-1,0,0) // Direccion de la luz direccional)
-        _SpotLightAperture("Spot Light Aperture", float) = 30 // Apertura del cono de luz spot en grados
-
+        _SpotLightDirection_w("Spot Light Direction (world)", Vector) = (0,-1,0,0)
+        _SpotLightAperture("Spot Light Aperture", float) = 30
         _CameraPosition_w("Camera Position (world)", Vector) = (5,0,0,1)
+        _MaterialKd("Kd Material", Color) = (0, 0, 0, 0)
+        _Fresnel("Reflectancia de Fresnel", color) = (0,0,0)
+        _Rugosidad("Rugosidad", Range(0,1)) = 0.0
+        _MainTex("Textura Difusa", 2D) = "white" {}
+
+        _MaterialKa("Ka Material", Color) = (0.1, 0.1, 0.1, 1)
 
     }
 
@@ -32,31 +30,22 @@ Shader "Custom/CookTorrance"
             #pragma fragment fragmentShader
             #include "UnityCG.cginc"
 
-             //
             struct vertice {
                 float4 position : POSITION;
                 float3 normal : NORMAL;
-                float2 uv : TEXCOORD0; //para usar una textura 2d
+                float2 uv : TEXCOORD0;
             };
 
             struct v2f {
                 float4 vertex : SV_POSITION;
                 float3 normal_w : TEXCOORD0;
                 float3 viewDir_w : TEXCOORD1;
-                float2 uv : TEXCOORD2; // paso textura 2d al fragment
-
+                float4 position_w : TEXCOORD2;
+                float2 uv : TEXCOORD3;
             };
 
-            //las variables globales
-            float4 _MaterialKd;
-            float3 _Fresnel;
-            float _Rugosidad;
-            sampler2D _MainTex;
-
-            //variables globales para luces
             float4 _PointLightIntensity;
             float4 _PointLightPosition_w;
-            float4 _CameraPosition_w;
             float4 _AmbientLight;
             float4 _DirectionalLightIntensity;
             float4 _DirectionalLightDirection_w;
@@ -65,81 +54,99 @@ Shader "Custom/CookTorrance"
             float4 _SpotLightDirection_w;
             float _SpotLightAperture;
 
-          
+            float4 _CameraPosition_w;
 
-            //FUNCIONES PRINCIPALES PARA MODELO COOK TORRANCE
+            float4 _MaterialKd;
+            float4 _MaterialKa;
+            float3 _Fresnel;
+            float _Rugosidad;
+            sampler2D _MainTex;
 
-            //Con fresnel defino cuanto refleja un material dependiendo del angulo de vision F 
-            float3 aproxFresnel_Smith(float3 V, float3 H)
-            {
+            float3 aproxFresnel_Smith(float3 V, float3 H) {
                 float3 F0 = _Fresnel;
                 return F0 + (1 - F0) * pow(1.0 - max(0, dot(V, H)), 5);
             }
-            //Represento la micro superficie rugosa - micro normales  D
-            float distribucionNormalesGGX(float3 N, float3 H)
-            {
+
+            float distribucionNormalesGGX(float3 N, float3 H) {
                 const float PI = 3.14159265;
                 float alpha = pow(_Rugosidad, 2);
-                float dotNH2 = pow(max(0, dot(N, H)), 2);
+                float dotNH2 = pow(max(0.001, dot(N, H)), 2);
                 float denom = PI * pow(dotNH2 * (alpha * alpha - 1) + 1, 2);
                 return (alpha * alpha) / denom;
             }
-            // para el sombreado 
-            float aproximacionSchlickGGX(float3 M, float3 N)
-            {
+
+            float aproximacionSchlickGGX(float3 M, float3 N) {
                 float alpha = pow(_Rugosidad, 2);
                 float k = alpha / 2;
-                float cosMN = max(0, dot(M, N));
+                float cosMN = max(0.001, dot(M, N));
                 float denom = (cosMN * (1 - k)) + k;
                 return cosMN / denom;
             }
-            //combino el resultado de la apximacion ggx para la luz, la vista y la normal G
-            float enmascaradoSombras_Smith(float3 L, float3 V, float3 N)
-            {
+
+            float enmascaradoSombras_Smith(float3 L, float3 V, float3 N) {
                 float G1L = aproximacionSchlickGGX(L, N);
                 float G1V = aproximacionSchlickGGX(V, N);
                 return G1L * G1V;
             }
 
-            //
-            float3 terminoEspecularCook_Torrance(float3 L, float3 N, float3 V)
-            {
+            float3 terminoEspecularCook_Torrance(float3 L, float3 N, float3 V) {
                 float3 H = normalize(L + V);
                 float3 F = aproxFresnel_Smith(V, H);
                 float D = distribucionNormalesGGX(N, H);
                 float G = enmascaradoSombras_Smith(L, V, N);
-                return F * D * G / (4 * max(0, dot(N, L)) * max(0, dot(N, V)));
+                return F * D * G / (4 * max(0.001, dot(N, L)) * max(0.001, dot(N, V)));
             }
 
-            v2f vertexShader(vertice v)
-            {
+            float3 terminoDifusoBlinn_Phong(float3 intensidadLuz, float3 L, float3 N, v2f f) {
+                float3 luzDifusa = 0.3 * intensidadLuz;
+                float3 reflexionDifusa = _MaterialKd.rgb * tex2D(_MainTex, f.uv).rgb * max(0.001, dot(N, L));
+                return luzDifusa * reflexionDifusa;
+            }
+
+            float esIluminadoSpot(float3 L) {
+                return dot(-L, normalize(_SpotLightDirection_w.xyz)) >= cos(_SpotLightAperture * UNITY_PI / 180.0) ? 1.0 : 0.0;
+            }
+
+            v2f vertexShader(vertice v) {
                 v2f o;
                 float4 worldPos = mul(unity_ObjectToWorld, v.position);
                 o.vertex = UnityObjectToClipPos(v.position);
                 o.normal_w = UnityObjectToWorldNormal(v.normal);
                 o.viewDir_w = normalize(_WorldSpaceCameraPos - worldPos);
                 o.uv = v.uv;
+                o.position_w = worldPos;
                 return o;
             }
 
-            fixed4 fragmentShader(v2f i) : SV_Target
-            {
+            fixed4 fragmentShader(v2f i) : SV_Target {
                 float3 N = normalize(i.normal_w);
                 float3 V = normalize(i.viewDir_w);
-                float3 difusoColor;
 
+                float3 LPuntual = normalize(_PointLightPosition_w.xyz - i.position_w.xyz);
+                float3 LDireccional = -normalize(_DirectionalLightDirection_w.xyz);
+                float3 LSpot = normalize(_SpotLightPosition_w.xyz - i.position_w.xyz);
 
-                // Direccion de luz fija 
-                float3 L = normalize(float3(0.577, 0.577, 0.577));
+                float3 ambiente = _AmbientLight.rgb * _MaterialKa.rgb;
 
-                //Difuso de lambert
-                float3 difuso = _MaterialKd*tex2D(_MainTex, i.uv).rgb * max(0, dot(N, L));
+                float3 difusoPuntual = terminoDifusoBlinn_Phong(_PointLightIntensity.rgb, LPuntual, N, i) / 3.14159265;
+                float3 difusoDireccional = terminoDifusoBlinn_Phong(_DirectionalLightIntensity.rgb, LDireccional, N, i) / 3.14159265;
+                float3 difusoSpot = float3(0, 0, 0);
 
+                float3 especularPuntual = _PointLightIntensity.rgb * terminoEspecularCook_Torrance(LPuntual, N, V);
+                float3 especularDireccional = _DirectionalLightIntensity.rgb * terminoEspecularCook_Torrance(LDireccional, N, V);
+                float3 especularSpot = float3(0, 0, 0);
 
-                float3 especular = terminoEspecularCook_Torrance(L, N, V);
+                if (esIluminadoSpot(LSpot)) {
+                    difusoSpot = terminoDifusoBlinn_Phong(_SpotLightIntensity.rgb, LSpot, N, i) / 3.14159265;
+                    especularSpot =  _SpotLightIntensity.rgb * terminoEspecularCook_Torrance(LSpot, N, V);
+                }
 
-                float3 colorFinal = difuso + especular;
-                return float4(colorFinal, 1);
+                float3 cookTorranceTotal = ambiente +
+                                           (difusoPuntual + especularPuntual) +
+                                           (difusoDireccional + especularDireccional) +
+                                           (difusoSpot + especularSpot);
+
+                return float4(cookTorranceTotal, 1);
             }
             ENDCG
         }
