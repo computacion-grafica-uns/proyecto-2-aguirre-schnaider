@@ -98,8 +98,8 @@ Material:
     - _WeightCracks: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-    - _CameraPosition_w: {r: 2, g: 0.8505459, b: -1.0889354, a: 0}
+    - _AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+    - _CameraPosition_w: {r: 0.9875543, g: 2.1175327, b: -2.1936705, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
@@ -109,7 +109,7 @@ Material:
     - _MaterialKd: {r: 0, g: 0.15750933, b: 1, a: 0}
     - _MaterialKs: {r: 0, g: 0, b: 0, a: 0}
     - _PointLightIntensity: {r: 1, g: 0.98679245, b: 0.98679245, a: 1}
-    - _PointLightPosition_w: {r: 7.45, g: 5, b: 0, a: 1}
+    - _PointLightPosition_w: {r: 1.28, g: 5, b: 0, a: 1}
     - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _SpotLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
