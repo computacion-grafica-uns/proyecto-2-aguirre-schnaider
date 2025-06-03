@@ -85,15 +85,15 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+    - _AmbientLight: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}
-    - _CameraPosition_w: {r: 0.9875543, g: 2.1175327, b: -2.1936705, a: 0}
+    - _CameraPosition_w: {r: 0.27177775, g: 0.7899459, b: -1.2912185, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PointLightIntensity: {r: 1, g: 0.98679245, b: 0.98679245, a: 1}
-    - _PointLightPosition_w: {r: 1.28, g: 5, b: 0, a: 1}
+    - _PointLightIntensity: {r: 0, g: 0, b: 0, a: 1}
+    - _PointLightPosition_w: {r: -0.24, g: 5, b: 0, a: 1}
     - _SpecularColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
     - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}
