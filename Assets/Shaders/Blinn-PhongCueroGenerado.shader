@@ -1,4 +1,4 @@
-Shader "BlinnPhongMultitextura"
+Shader "BlinnPhongCueroGenerado"
 {
     Properties
     {
@@ -19,11 +19,11 @@ Shader "BlinnPhongMultitextura"
         _MaterialKs("Material Ks", Vector) = (0,0,0,0)
         _Material_n("Material n", float) = 0.5
 
-        [NoScaleOffset] _TextureA ("TexturaA", 2D) = "white" {}
-        [NoScaleOffset] _TextureB ("TexturaB (Cracks)", 2D) = "white" {}
-        _WeightCracks ("Weight Cracks", Range(0,1)) = 0.5
-       
-
+        _LeatherBaseColor("Leather Base Color", Color) = (0.18,0.09,0.04,1) // dark brown
+        _LeatherGrainColor("Leather Grain Color", Color) = (0.25,0.13,0.07,1) // lighter brown for grain
+        _LeatherGrainScale("Leather Grain Scale", Float) = 80
+        _LeatherNoiseScale("Leather Noise Scale", Float) = 18
+        _LeatherGrainStrength("Leather Grain Strength", Range(0,1)) = 0.5
 
     }
     SubShader
@@ -74,14 +74,44 @@ Shader "BlinnPhongMultitextura"
             float4 _MaterialKd;
             float4 _MaterialKs;
             float _Material_n;
-            sampler2D _TextureA;
-            sampler2D _TextureB;
-            float _WeightCracks;
+            
+            float4 _LeatherBaseColor;
+            float4 _LeatherGrainColor;
+            float _LeatherGrainScale;
+            float _LeatherNoiseScale;
+            float _LeatherGrainStrength;
+
+            // Procedural texture
+            // Simple pseudo-random noise based on UV
+            float noise(float2 uv)
+            {
+                return frac(sin(dot(uv, float2(12.9898,78.233))) * 43758.5453);
+            }
+
+            // Generates a cell-like grain pattern for leather
+            float grainPattern(float2 uv)
+            {
+                float2 grainUV = uv * _LeatherGrainScale;
+                float cell = frac(grainUV.x) * frac(grainUV.y);
+                float n = noise(uv * _LeatherNoiseScale);
+                // Mix cell and noise for irregularity
+                return lerp(cell, n, 0.5);
+            }
+
+            // Procedural leather color
+            float3 ProceduralLeather(float2 uv)
+            {
+                float grain = grainPattern(uv);
+                // Blend between base and grain color based on grain strength
+                return lerp(_LeatherBaseColor.rgb, _LeatherGrainColor.rgb, grain * _LeatherGrainStrength);
+            }
+
+
 
             float3 calculateDiffuse(v2f i, float3 L , float3 lightIntensity){
                 float3 N = normalize(i.normal_w);
                 float DiffuseReflexivity = max(0, dot(N, L));
-                return lightIntensity * DiffuseReflexivity * _MaterialKd;
+                return lightIntensity * DiffuseReflexivity * _MaterialKd * ProceduralLeather(i.uv);
             }
 
             float3 calculateSpecular(v2f i, float3 L, float3 lightIntensity){
@@ -117,13 +147,7 @@ Shader "BlinnPhongMultitextura"
         
             fixed4 frag(v2f i) : SV_Target
             {
-                fixed4 fragColor = 0; // Initialize fragment color
-
-                //Mezclo las multiples texturas a un solo color por fragmento
-                float3 texA = tex2D(_TextureA, i.uv).rgb;
-                float3 texB = tex2D(_TextureB, i.uv).rgb;
-                float3 blendedTex = texA * (texB);
-                blendedTex = lerp(blendedTex, texA, _WeightCracks); // Mezcla las texturas con el peso
+                fixed4 fragColor = 0; // Initialize fragment color)
                 
                 //parte de iluminación ambiente
                 float3 ambient = _AmbientLight * _MaterialKa;
@@ -131,17 +155,17 @@ Shader "BlinnPhongMultitextura"
 
                 //Luz puntual
                 float3 L = normalize(_PointLightPosition_w - i.position_w);
-                float3 luzPuntual = calculateDiffuse(i, L, _PointLightIntensity.rgb)*blendedTex + calculateSpecular(i, L , _PointLightIntensity.rgb);
+                float3 luzPuntual = calculateDiffuse(i, L, _PointLightIntensity.rgb) + calculateSpecular(i, L , _PointLightIntensity.rgb);
 
                 //Luz direccional
                 L = -normalize(_DirectionalLightDirection_w.xyz);
-                float3 luzDireccional = calculateDiffuse(i, L, _DirectionalLightIntensity.rgb)*blendedTex + calculateSpecular(i, L, _DirectionalLightIntensity.rgb);
+                float3 luzDireccional = calculateDiffuse(i, L, _DirectionalLightIntensity.rgb) + calculateSpecular(i, L, _DirectionalLightIntensity.rgb);
 
                 float3 luzSpot = 0;
                 L = normalize(_SpotLightPosition_w.xyz - i.position_w);
                 if ( esIluminadoSpot(L) )
                 {
-                    luzSpot = calculateDiffuse(i, L, _SpotLightIntensity.rgb)*blendedTex + calculateSpecular(i, L, _SpotLightIntensity.rgb);
+                    luzSpot = calculateDiffuse(i, L, _SpotLightIntensity.rgb) + calculateSpecular(i, L, _SpotLightIntensity.rgb);
                 }
 
                 fragColor.rgb = ambient + luzPuntual + luzDireccional + luzSpot;
