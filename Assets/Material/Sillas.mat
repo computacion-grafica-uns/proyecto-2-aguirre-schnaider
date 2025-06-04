@@ -107,7 +107,7 @@ Material:
     - _MaterialKd: {r: 1, g: 1, b: 1, a: 1}
     - _MaterialKs: {r: 0, g: 0, b: 0, a: 1}
     - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 0}
-    - _PointLightPosition_w: {r: 0, g: 3, b: 0, a: 0}
+    - _PointLightPosition_w: {r: -0.33, g: 5, b: -3.07, a: 0}
     - _SpotLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
     - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 0}
     - _SpotLightPosition_w: {r: 0, g: 0, b: 0, a: 0}
