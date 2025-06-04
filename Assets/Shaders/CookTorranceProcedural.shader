@@ -1,4 +1,4 @@
-Shader "CookTorranceProcedural"
+﻿Shader "CookTorranceProcedural"
 {
     Properties
     {
@@ -98,6 +98,20 @@ Shader "CookTorranceProcedural"
                 // Blend between base color and vein color
                 return lerp(_MarbleColorA.rgb, _MarbleColorB.rgb, veins);
             }
+            float3 ProceduralCircles(float2 uv)
+            {
+                float2 centeredUV = uv - 0.5;
+                float r = length(centeredUV);
+
+                // Frecuencia ALTÍSIMA para muchos círculos finitos
+                float frequency = 300.0; // Aumentá más si querés aún más densidad
+
+                float circlePattern = 0.5 + 0.5 * cos(r * frequency * 6.28318); // 2π
+                circlePattern = pow(circlePattern, 8); // Esto afila las líneas si querés más contraste
+
+                float3 metalColor = float3(0.85, 0.85, 0.85); // Color aluminio pulido
+                return metalColor * circlePattern;
+            }
 
 
             float3 aproxFresnel_Smith(float3 V, float3 H) {
@@ -161,7 +175,7 @@ Shader "CookTorranceProcedural"
                 float3 V = normalize(i.viewDir_w);
 
                 //agrego las texturas
-                float3 blendedTex = ProceduralMarble(i.uv);
+                float3 blendedTex = ProceduralCircles(i.uv);
                
 
 
