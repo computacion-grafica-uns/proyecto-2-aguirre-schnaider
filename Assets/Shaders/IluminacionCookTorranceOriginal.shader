@@ -150,13 +150,13 @@ Shader "Custom/CookTorranceIluminacion"
                 float3 difusoDireccional = blendedTex * terminoDifusoBlinn_Phong(_DirectionalLightIntensity.rgb, LDireccional, N, i) / 3.14159265;
                 float3 difusoSpot = float3(0, 0, 0);
 
-                float3 especularPuntual = _PointLightIntensity.rgb * terminoEspecularCook_Torrance(LPuntual, N, V);
-                float3 especularDireccional = _DirectionalLightIntensity.rgb * terminoEspecularCook_Torrance(LDireccional, N, V);
+                float3 especularPuntual = _PointLightIntensity.rgb * terminoEspecularCook_Torrance(LPuntual, N, V) * texB*(1-_WeightCracks) ;
+                float3 especularDireccional = _DirectionalLightIntensity.rgb * terminoEspecularCook_Torrance(LDireccional, N, V) * texB*(1-_WeightCracks);
                 float3 especularSpot = float3(0, 0, 0);
 
                 if (esIluminadoSpot(LSpot)) {
                     difusoSpot = blendedTex * terminoDifusoBlinn_Phong(_SpotLightIntensity.rgb, LSpot, N, i) / 3.14159265;
-                    especularSpot =  _SpotLightIntensity.rgb * terminoEspecularCook_Torrance(LSpot, N, V);
+                    especularSpot =  _SpotLightIntensity.rgb * terminoEspecularCook_Torrance(LSpot, N, V) * texB*(1-_WeightCracks);
                 }
 
                 float3 cookTorranceTotal = ambiente +
