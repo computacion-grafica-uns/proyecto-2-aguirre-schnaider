@@ -17,17 +17,17 @@ public class CameraManager : MonoBehaviour
 
     //Light atributtes
     // Shader color properties
-    public Color PointLightIntensity;
-    public Color AmbientLight;
-    public Color DirectionalLightIntensity;
-    public Color SpotLightIntensity;
+    public Color PointLightIntensity = new Vector4(0.8f, 0.8f, 0.8f, 1f);
+    public Color AmbientLight = new Vector4(0.2f, 0.2f, 0.2f, 1f);  
+    public Color DirectionalLightIntensity = new Vector4(0f, 0f, 0f , 1f);
+    public Color SpotLightIntensity = new Vector4(0f, 0f, 0f, 1f);
     // Shader vector properties
-    public Vector4 PointLightPosition_w;
-    public Vector4 DirectionalLightDirection_w;
-    public Vector4 SpotLightPosition_w;
-    public Vector4 SpotLightDirection_w;
+    public Vector4 PointLightPosition_w = new Vector4(0f, 2f, 0f, 1f);
+    public Vector4 DirectionalLightDirection_w = new Vector4(0f, -1f, 0f, 1f);
+    public Vector4 SpotLightPosition_w = new Vector4(1f, 2f, 0f, 1f);
+    public Vector4 SpotLightDirection_w = new Vector4(0f, -1f, 0f, 1f);
     // Shader float property
-    public float SpotLightAperture;
+    public float SpotLightAperture = 30f;
 
     // Camera movement attributes
     public float distance = 1f;
