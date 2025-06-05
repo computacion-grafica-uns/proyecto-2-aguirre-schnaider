@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -271,11 +275,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 78290034884f196469fff4f4ba1716b9, type: 2}
+      objectReference: {fileID: 2100000, guid: 7317ff721a864bf4eb774d4d07af1118, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -353,11 +361,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 39e3e86a68bfce64d9423030108df0c6, type: 2}
+      objectReference: {fileID: 2100000, guid: 9e3bab616e1bd7c4d8539683e5c01db1, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -435,11 +447,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 41dca6262818ee8459dd43688a42f82a, type: 2}
+      objectReference: {fileID: 2100000, guid: dde9207748927b64cbfa685b27c9ff8d, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -512,18 +528,19 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 39e3e86a68bfce64d9423030108df0c6, type: 2}
+      objectReference: {fileID: 2100000, guid: 2ff601a37830bfc47b7c17f61901b94f, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 220168551992375693, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 499550153}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
 --- !u!4 &307552838 stripped
 Transform:
@@ -597,11 +614,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 41dca6262818ee8459dd43688a42f82a, type: 2}
+      objectReference: {fileID: 2100000, guid: c01afc1cd5783b0478cf8096e1f97933, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -674,11 +695,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
+      objectReference: {fileID: 2100000, guid: 846e0c186d621ba41a8fc9d79e6ebaf5, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -786,23 +811,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
   m_PrefabInstance: {fileID: 2047306642}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &499550151 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 220168551992375693, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
-  m_PrefabInstance: {fileID: 301388481}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &499550153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499550151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 203266070cb59784a862ee4f081edcc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &595738321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
@@ -925,11 +933,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9e3bab616e1bd7c4d8539683e5c01db1, type: 2}
+      objectReference: {fileID: 2100000, guid: 39e3e86a68bfce64d9423030108df0c6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1022,6 +1034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 13
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1099,11 +1115,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0b07bd5e6eaae3c42b66a9db811a3678, type: 2}
+      objectReference: {fileID: 2100000, guid: a6a412ea584b8d2469781f5cd08a0a32, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 11
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1181,6 +1201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 14
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1345,11 +1369,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5042c9fdbb2eec74a9b1f9a9a02001f0, type: 2}
+      objectReference: {fileID: 2100000, guid: 555762a365daa4144a2934f7866b7c29, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1412,20 +1440,26 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: cf01ccd542dfd9447a21b5efdedc5194, type: 2}
   - {fileID: 2100000, guid: b1a290d8aafc8ad44b814758b25a167a, type: 2}
+  - {fileID: 2100000, guid: 39e3e86a68bfce64d9423030108df0c6, type: 2}
   - {fileID: 2100000, guid: 9bc788a53928f0044badb7c407c6cfbf, type: 2}
   - {fileID: 2100000, guid: f564f7acc13628f4aa2eeefc1faf15f3, type: 2}
+  - {fileID: 2100000, guid: 9e3bab616e1bd7c4d8539683e5c01db1, type: 2}
   - {fileID: 2100000, guid: 56e1eafa9d115694ea1391c24b4757f8, type: 2}
   - {fileID: 2100000, guid: 8bdf03cd6cb84644dbd576439b9639f9, type: 2}
-  - {fileID: 2100000, guid: ca2fd815c7df12a41a4d8567777a572b, type: 2}
-  - {fileID: 2100000, guid: c48309eb1c34a26419128610a2cd418e, type: 2}
-  - {fileID: 2100000, guid: ae93994f4362b3c4ebbea51c28343c2a, type: 2}
-  - {fileID: 2100000, guid: f5c1a20d52184b54895b46dcf3f3314b, type: 2}
-  - {fileID: 2100000, guid: 5042c9fdbb2eec74a9b1f9a9a02001f0, type: 2}
-  - {fileID: 2100000, guid: 9163dc0cb96780e4cb46908ce2dfdcbb, type: 2}
   - {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
-  - {fileID: 2100000, guid: 39e3e86a68bfce64d9423030108df0c6, type: 2}
-  - {fileID: 2100000, guid: 9e3bab616e1bd7c4d8539683e5c01db1, type: 2}
-  - {fileID: 2100000, guid: 41dca6262818ee8459dd43688a42f82a, type: 2}
+  - {fileID: 2100000, guid: 4fcf35fbc0cef36419c07b6b32db93ed, type: 2}
+  - {fileID: 2100000, guid: c01afc1cd5783b0478cf8096e1f97933, type: 2}
+  - {fileID: 2100000, guid: afa3ad71ce0015c4ab5f53c808b4a5df, type: 2}
+  - {fileID: 2100000, guid: d06560d1dfe415c48a7d3991d050e3dd, type: 2}
+  - {fileID: 2100000, guid: 7317ff721a864bf4eb774d4d07af1118, type: 2}
+  - {fileID: 2100000, guid: 555762a365daa4144a2934f7866b7c29, type: 2}
+  - {fileID: 2100000, guid: 846e0c186d621ba41a8fc9d79e6ebaf5, type: 2}
+  - {fileID: 2100000, guid: dde9207748927b64cbfa685b27c9ff8d, type: 2}
+  - {fileID: 2100000, guid: faaf9f253f5742e40a01e6f82efdd35e, type: 2}
+  - {fileID: 2100000, guid: a6a412ea584b8d2469781f5cd08a0a32, type: 2}
+  - {fileID: 2100000, guid: 2ff601a37830bfc47b7c17f61901b94f, type: 2}
+  - {fileID: 2100000, guid: 7024bf1ce70aa764d80cb66fb98d13e7, type: 2}
+  - {fileID: 2100000, guid: ca2fd815c7df12a41a4d8567777a572b, type: 2}
   PointLightIntensity: {r: 1, g: 0.98679245, b: 0.98679245, a: 1}
   AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
   DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
@@ -1528,11 +1562,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f5c1a20d52184b54895b46dcf3f3314b, type: 2}
+      objectReference: {fileID: 2100000, guid: d06560d1dfe415c48a7d3991d050e3dd, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1610,6 +1648,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 21
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1682,11 +1724,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c48309eb1c34a26419128610a2cd418e, type: 2}
+      objectReference: {fileID: 2100000, guid: afa3ad71ce0015c4ab5f53c808b4a5df, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 12
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1766,10 +1812,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: faaf9f253f5742e40a01e6f82efdd35e, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 18
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1842,11 +1896,15 @@ PrefabInstance:
     - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ae93994f4362b3c4ebbea51c28343c2a, type: 2}
+      objectReference: {fileID: 2100000, guid: 4fcf35fbc0cef36419c07b6b32db93ed, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1960,6 +2018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 9
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2148,6 +2210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 7
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2240,6 +2306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetera 20
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2314,10 +2384,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7936024133847426488, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7024bf1ce70aa764d80cb66fb98d13e7, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
       propertyPath: m_Name
       value: Tetera 19
       objectReference: {fileID: 0}
+    - target: {fileID: 4188531639213701860, guid: 8b6b3c79fdfd9314b8fd8f565e3ce5df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bffedf7ea05b47446bf1920392acd160, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2333,24 +2411,24 @@ SceneRoots:
   - {fileID: 683286312}
   - {fileID: 1174803382}
   - {fileID: 1628828871}
-  - {fileID: 308695975}
-  - {fileID: 93118671}
-  - {fileID: 274729503}
-  - {fileID: 301388481}
-  - {fileID: 793361279}
-  - {fileID: 238250333}
-  - {fileID: 1950262573}
-  - {fileID: 1600929210}
-  - {fileID: 1712908396}
-  - {fileID: 392013122}
-  - {fileID: 1076718224}
-  - {fileID: 1437436945}
-  - {fileID: 971578286}
   - {fileID: 1096997047}
-  - {fileID: 1293615581}
-  - {fileID: 65923258}
-  - {fileID: 1115111581}
-  - {fileID: 1591363052}
-  - {fileID: 2130057691}
-  - {fileID: 2047306642}
+  - {fileID: 793361279}
+  - {fileID: 1950262573}
+  - {fileID: 971578286}
+  - {fileID: 238250333}
   - {fileID: 1409881877}
+  - {fileID: 1712908396}
+  - {fileID: 65923258}
+  - {fileID: 2047306642}
+  - {fileID: 1600929210}
+  - {fileID: 308695975}
+  - {fileID: 1437436945}
+  - {fileID: 1293615581}
+  - {fileID: 93118671}
+  - {fileID: 1115111581}
+  - {fileID: 392013122}
+  - {fileID: 274729503}
+  - {fileID: 1591363052}
+  - {fileID: 1076718224}
+  - {fileID: 301388481}
+  - {fileID: 2130057691}
