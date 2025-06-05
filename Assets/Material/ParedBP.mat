@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sillas
-  m_Shader: {fileID: 4800000, guid: 1923e487f51ff32409310a321260feb0, type: 3}
+  m_Name: ParedBP
+  m_Shader: {fileID: 4800000, guid: 5c9547ac83b5a9c41ac9900f39b977c6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -60,15 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 1d2c6be83ce67974ea9805e484b55f7a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureA:
-        m_Texture: {fileID: 2800000, guid: f95eebc934b76e24984a3c1eb5a45955, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TextureB:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2d540c0d96b9548478289c9e74836a77, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -80,34 +72,29 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Material_n: 3
+    - _Material_n: 8
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rugosidad: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpotLightAperture: -0.22
+    - _SpotLightAperture: 0
     - _SrcBlend: 1
     - _UVSec: 0
-    - _WeightCracks: 1
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0, g: 0, b: 0, a: 0}
-    - _CameraPosition_w: {r: -0.63039434, g: 0.56856954, b: 1.5685184, a: 0}
+    - _CameraPosition_w: {r: -3.0050836, g: 1.6000004, b: -4.118682, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0.047169805, g: 0.04071733, b: 0.04071733, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnel: {r: 1, g: 1, b: 1, a: 1}
-    - _LightIntensity: {r: 1, g: 1, b: 1, a: 1}
-    - _LightPosition_w: {r: 0, g: 5, b: 0, a: 1}
-    - _MaterialKa: {r: 0.1, g: 0.05, b: 0.02, a: 1}
-    - _MaterialKd: {r: 1, g: 1, b: 1, a: 1}
-    - _MaterialKs: {r: 0, g: 0, b: 0, a: 1}
+    - _MaterialKa: {r: 0.15, g: 0.15, b: 0.15, a: 1}
+    - _MaterialKd: {r: 0.9, g: 0.9, b: 0.9, a: 1}
+    - _MaterialKs: {r: 0.02, g: 0.02, b: 0.02, a: 1}
     - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 0}
-    - _PointLightPosition_w: {r: 8.9, g: 5, b: -3.07, a: 0}
+    - _PointLightPosition_w: {r: 3.3, g: 5, b: -3.07, a: 0}
     - _SpotLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
     - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 0}
     - _SpotLightPosition_w: {r: 0, g: 0, b: 0, a: 0}

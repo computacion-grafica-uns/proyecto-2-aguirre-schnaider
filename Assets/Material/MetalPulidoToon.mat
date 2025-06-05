@@ -92,8 +92,8 @@ Material:
     - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PointLightIntensity: {r: 0, g: 0, b: 0, a: 1}
-    - _PointLightPosition_w: {r: -0.24, g: 5, b: 0, a: 1}
+    - _PointLightIntensity: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+    - _PointLightPosition_w: {r: -1.39, g: 4.53, b: -2.37, a: 1}
     - _SpecularColor: {r: 0.95, g: 0.95, b: 0.95, a: 1}
     - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 1}

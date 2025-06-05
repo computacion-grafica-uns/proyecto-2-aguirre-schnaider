@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BolaNavidadToon
+  m_Name: MinecraftPainting
   m_Shader: {fileID: 4800000, guid: 6fbb0abb14969b949936e4bf941b9d88, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 4e19b0581a7d4f546862dfb651e8502c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -77,26 +77,26 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ShadeLevels: 5
-    - _Shininess: 25
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _SpotLightAperture: 0
+    - _SpotLightAperture: 30
     - _SrcBlend: 1
-    - _TextureLevels: 3
+    - _TextureLevels: 6.3
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientLight: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.8, g: 0.05, b: 0.05, a: 1}
-    - _CameraPosition_w: {r: -3.0050836, g: 1.6000004, b: -4.118682, a: 0}
+    - _AmbientLight: {r: 0.09999997, g: 0.09999997, b: 0.09999997, a: 1}
+    - _BaseColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    - _CameraPosition_w: {r: 5, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DirectionalLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
-    - _DirectionalLightIntensity: {r: 0.047169805, g: 0.04071733, b: 0.04071733, a: 0}
+    - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
+    - _DirectionalLightIntensity: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 0}
-    - _PointLightPosition_w: {r: 3.3, g: 5, b: -3.07, a: 0}
-    - _SpecularColor: {r: 0.3, g: 0.1, b: 0.1, a: 1}
-    - _SpotLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
-    - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 0}
-    - _SpotLightPosition_w: {r: 0, g: 0, b: 0, a: 0}
+    - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _PointLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
+    - _SpecularColor: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
+    - _SpotLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
+    - _SpotLightIntensity: {r: 1, g: 1, b: 1, a: 1}
+    - _SpotLightPosition_w: {r: 0, g: 5, b: 0, a: 1}
   m_BuildTextureStacks: []

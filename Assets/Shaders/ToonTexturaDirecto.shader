@@ -19,6 +19,7 @@ Shader "ToonTexturaDirecto"
         _SpecularColor("Specular Color", Color) = (1,1,1,1)
         _Shininess("Shininess", float) = 0.5
         _ShadeLevels ("Shade Levels", Range(1,5)) = 3
+        _TextureLevels("texture levels", Range(1,10)) = 3 
 
         [NoScaleOffset] _Texture ("Textura", 2D) = "white" {}
     }
@@ -51,6 +52,7 @@ Shader "ToonTexturaDirecto"
             float4 _SpecularColor;
             float _Shininess;
             int _ShadeLevels;
+            int _TextureLevels;
             sampler2D _Texture;
 
 
@@ -91,7 +93,7 @@ Shader "ToonTexturaDirecto"
 
             fixed4 frag(v2f i) : SV_Target
             {
-                float3 texColor = Posterize(tex2D(_Texture, i.uv).rgb, _ShadeLevels*2);
+                float3 texColor = Posterize(tex2D(_Texture, i.uv).rgb, _TextureLevels);
                 // Luz puntual
                 float3 N = normalize(i.worldNormal);
                 float3 L = normalize(_PointLightPosition_w.xyz - i.worldPos);

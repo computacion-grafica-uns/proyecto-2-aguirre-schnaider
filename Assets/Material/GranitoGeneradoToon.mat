@@ -87,7 +87,7 @@ Material:
     m_Colors:
     - _AmbientLight: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 0.18, g: 0.19, b: 0.22, a: 1}
-    - _CameraPosition_w: {r: 4.979539, g: 1.6, b: 0.18293497, a: 0}
+    - _CameraPosition_w: {r: -3.0050836, g: 1.6000004, b: -4.118682, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0.047169805, g: 0.04071733, b: 0.04071733, a: 0}
