@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PorcelanaCT
-  m_Shader: {fileID: 4800000, guid: 1923e487f51ff32409310a321260feb0, type: 3}
+  m_Name: PorcelanaToon
+  m_Shader: {fileID: 4800000, guid: 8ac84b70fd8de3e49a0e84118731e492, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -81,16 +81,20 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Rugosidad: 0.1
+    - _ShadeLevels: 4.33
+    - _Shininess: 64
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpotLightAperture: 0
     - _SrcBlend: 1
+    - _TextureLevels: 5.1
     - _UVSec: 0
     - _WeightCracks: 0
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0, g: 0, b: 0, a: 0}
-    - _CameraPosition_w: {r: -0.63039434, g: 0.56856954, b: 1.5685184, a: 0}
+    - _BaseColor: {r: 0.9, g: 0.9, b: 0.95, a: 1}
+    - _CameraPosition_w: {r: 4.979539, g: 1.6, b: 0.18293497, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0.047169805, g: 0.04071733, b: 0.04071733, a: 0}
@@ -99,7 +103,8 @@ Material:
     - _MaterialKa: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _MaterialKd: {r: 0.95, g: 0.95, b: 0.95, a: 1}
     - _PointLightIntensity: {r: 1, g: 1, b: 1, a: 0}
-    - _PointLightPosition_w: {r: -0.33, g: 5, b: -3.07, a: 0}
+    - _PointLightPosition_w: {r: 3.3, g: 5, b: -3.07, a: 0}
+    - _SpecularColor: {r: 0.3, g: 0.3, b: 0.3, a: 1}
     - _SpotLightDirection_w: {r: 0, g: 0, b: 0, a: 0}
     - _SpotLightIntensity: {r: 0, g: 0, b: 0, a: 0}
     - _SpotLightPosition_w: {r: 0, g: 0, b: 0, a: 0}

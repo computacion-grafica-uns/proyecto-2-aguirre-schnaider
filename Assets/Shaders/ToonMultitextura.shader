@@ -19,7 +19,7 @@ Shader "ToonMultitextura"
         _SpecularColor("Specular Color", Color) = (1,1,1,1)
         _Shininess("Shininess", float) = 0.5
         _ShadeLevels ("Shade Levels", Range(1,5)) = 3
-        _TextureLevels("texture levels", Range(1,5)) = 3 
+        _TextureLevels("texture levels", Range(1,10)) = 3 
 
         [NoScaleOffset] _TextureA ("TexturaA", 2D) = "white" {}
         [NoScaleOffset] _TextureB ("TexturaB (Cracks)", 2D) = "white" {}
