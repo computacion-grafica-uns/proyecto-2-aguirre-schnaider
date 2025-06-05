@@ -79,32 +79,13 @@
 
             //procedural marble texture
             // Simple pseudo-random noise based on UV
-            float noise(float2 uv)
-            {
-                return frac(sin(dot(uv, float2(12.9898,78.233))) * 43758.5453);
-            }
-            // Generates a marble pattern using sine and noise
-            float3 ProceduralMarble(float2 uv)
-            {
-                // Add some noise to the UVs for more natural veins
-                float n = noise(uv * _MarbleNoiseScale);
-
-                // Create a wavy pattern using sine, modulated by noise
-                float veins = sin((uv.x + n * _MarbleVeinIntensity) * _MarbleVeinScale + uv.y * 2.0);
-
-                // Map veins from [-1,1] to [0,1]
-                veins = veins * 0.5 + 0.5;
-
-                // Blend between base color and vein color
-                return lerp(_MarbleColorA.rgb, _MarbleColorB.rgb, veins);
-            }
             float3 ProceduralCircles(float2 uv)
             {
                 float2 centeredUV = uv - 0.5;
                 float r = length(centeredUV);
 
                 // Frecuencia ALTÍSIMA para muchos círculos finitos
-                float frequency = 300.0; // Aumentá más si querés aún más densidad
+                float frequency = 150; // Aumentá más si querés aún más densidad
 
                 float circlePattern = 0.5 + 0.5 * cos(r * frequency * 6.28318); // 2π
                 circlePattern = pow(circlePattern, 8); // Esto afila las líneas si querés más contraste
@@ -176,10 +157,8 @@
 
                 //agrego las texturas
                 float3 blendedTex = ProceduralCircles(i.uv);
-               
-
-
-                
+                blendedTex = lerp(1,blendedTex,0.9);
+          
                 float3 LPuntual = normalize(_PointLightPosition_w.xyz - i.position_w.xyz);
                 float3 LDireccional = -normalize(_DirectionalLightDirection_w.xyz);
                 float3 LSpot = normalize(_SpotLightPosition_w.xyz - i.position_w.xyz);
