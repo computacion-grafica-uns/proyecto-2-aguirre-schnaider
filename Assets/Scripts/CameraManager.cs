@@ -43,22 +43,27 @@ public class CameraManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (orbitalCamera != null && firstPersonCamera != null && objects != null && objects[0] != null)
+        if (orbitalCamera != null  && objects != null && objects[0] != null)
         {
+            
+
             // Colocar la cámara a una distancia y orientarla hacia el objeto
             Vector3 direction = (orbitalCamera.transform.position - objects[0].position).normalized;
             orbitalCamera.transform.position = objects[0].position + direction * distance;
             orbitalCamera.transform.LookAt(objects[0].position);
 
-            // Inicializo la posición de la cámara de primera persona
-            firstPersonCamera.transform.position = new Vector3(0,1.6f,0);
-            firstPersonCamera.transform.rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
-            firstPersonRotatingSpeed = 150f;
+            // Inicializo la posición de la cámara de primera persona si no es nula
+            if (firstPersonCamera != null)
+            {
+                firstPersonCamera.transform.position = new Vector3(0, 1.6f, 0);
+                firstPersonCamera.transform.rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
+                firstPersonRotatingSpeed = 150f;
+                firstPersonCamera.enabled = false;
+                firstPersonCamera.GetComponent<AudioListener>().enabled = false;
+            }
 
             // Desactivo la camara de primera persona y los dos audio listeners (no hay audio)
-            firstPersonCamera.enabled = false;
             orbitalCamera.GetComponent<AudioListener>().enabled = false;
-            firstPersonCamera.GetComponent<AudioListener>().enabled = false;
 
             // Coordinar propiedades de los shaders
             UpdateShaderProperties();
@@ -67,7 +72,7 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        if (orbitalCamera == null || firstPersonCamera == null || objects == null || objects[0] == null) return;
+        if (orbitalCamera == null ||  objects == null || objects[0] == null) return;
 
         if (cameraMode == 0) // Orbital camera mode
         {
@@ -78,7 +83,7 @@ public class CameraManager : MonoBehaviour
             HandleFirstPersonCameraMovement();
         }
         
-        if( Input.GetKeyDown(KeyCode.Tab))
+        if( Input.GetKeyDown(KeyCode.Tab) && firstPersonCamera!=null)
         {
             cameraMode = (cameraMode + 1) % 2; // Alternar entre 0 y 1
             if (cameraMode == 0)

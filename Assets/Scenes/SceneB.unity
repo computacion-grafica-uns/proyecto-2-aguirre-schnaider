@@ -1520,6 +1520,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 41dca6262818ee8459dd43688a42f82a, type: 2}
+    - target: {fileID: -5146781687704509965, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: -5146781687704509965, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: -5146781687704509965, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: -5146781687704509965, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.156
+      objectReference: {fileID: 0}
+    - target: {fileID: -5146781687704509965, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.436
+      objectReference: {fileID: 0}
+    - target: {fileID: -5146781687704509965, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4400062254560944584, guid: c6e18e1ac060da744b3f4cc112a3516a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1982,6 +2006,7 @@ MonoBehaviour:
   orbitalCamera: {fileID: 244980674}
   firstPersonCamera: {fileID: 1569741976}
   objects:
+  - {fileID: 487490736}
   - {fileID: 1765830794}
   - {fileID: 220036677}
   - {fileID: 296936437}
@@ -1995,11 +2020,11 @@ MonoBehaviour:
   - {fileID: 310971213}
   - {fileID: 1011393767}
   - {fileID: 626960509}
-  - {fileID: 1729522217}
   - {fileID: 232023909}
   - {fileID: 213034919}
   - {fileID: 204063843}
   - {fileID: 1066050627}
+  - {fileID: 1729522217}
   - {fileID: 609531507}
   - {fileID: 2108278567}
   - {fileID: 827734457}
