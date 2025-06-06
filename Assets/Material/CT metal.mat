@@ -99,13 +99,13 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0.1, g: 0.1, b: 0.1, a: 1}
-    - _CameraPosition_w: {r: 0, g: 1.1686326, b: -4.8615117, a: 0}
+    - _CameraPosition_w: {r: -2.7765877, g: 1.4282789, b: -1.3453553, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionalLightDirection_w: {r: 0, g: -1, b: 0, a: 0}
     - _DirectionalLightIntensity: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnel: {r: 0.91, g: 0.92, b: 0.92, a: 1}
-    - _MaterialKa: {r: 0.09999997, g: 0.09999997, b: 0.09999997, a: 1}
+    - _Fresnel: {r: 0.4641509, g: 0.4641509, b: 0.4641509, a: 1}
+    - _MaterialKa: {r: 0, g: 0, b: 0, a: 1}
     - _MaterialKd: {r: 0.91, g: 0.92, b: 0.92, a: 1}
     - _MaterialKs: {r: 0, g: 0, b: 0, a: 0}
     - _PointLightIntensity: {r: 1, g: 0.98679245, b: 0.98679245, a: 1}
