@@ -163,7 +163,7 @@
                 float3 LDireccional = -normalize(_DirectionalLightDirection_w.xyz);
                 float3 LSpot = normalize(_SpotLightPosition_w.xyz - i.position_w.xyz);
 
-                float3 ambiente = _AmbientLight.rgb * _MaterialKa.rgb;
+                float3 ambiente = _AmbientLight.rgb * _MaterialKa.rgb * blendedTex;
 
                 //luz puntual
                 float3 difusoPuntual = blendedTex * terminoDifusoBlinn_Phong(_PointLightIntensity.rgb, LPuntual, N, i) / 3.14159265;
@@ -171,8 +171,8 @@
                 float3 difusoDireccional = blendedTex * terminoDifusoBlinn_Phong(_DirectionalLightIntensity.rgb, LDireccional, N, i) / 3.14159265;
                 float3 difusoSpot = float3(0, 0, 0);
 
-                float3 especularPuntual = _PointLightIntensity.rgb * terminoEspecularCook_Torrance(LPuntual, N, V);
-                float3 especularDireccional = _DirectionalLightIntensity.rgb * terminoEspecularCook_Torrance(LDireccional, N, V);
+                float3 especularPuntual = blendedTex*_PointLightIntensity.rgb * terminoEspecularCook_Torrance(LPuntual, N, V);
+                float3 especularDireccional = blendedTex*_DirectionalLightIntensity.rgb * terminoEspecularCook_Torrance(LDireccional, N, V);
                 float3 especularSpot = float3(0, 0, 0);
 
                 if (esIluminadoSpot(LSpot)) {
